@@ -12,6 +12,15 @@ public class Enterprise {
     private int age;
     private String[] subject;
     private String address;
+    private int idNumber;
+
+    public int getIdNumber() {
+        return idNumber;
+    }
+
+    public void setIdNumber(int idNumber) {
+        this.idNumber = idNumber;
+    }
 
     public String getAddress() {
         return address;
