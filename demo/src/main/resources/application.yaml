@@ -3,7 +3,6 @@ server:
 spring:
   application:
     name: Ruiji_take
-
   # 初始化dispatcherServlet，默认-1未开启，0及以上为开启
   spring:
     mvc:
@@ -16,6 +15,18 @@ spring:
       url: jdbc:mysql://localhost:3306/ruiji_take-out_food?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: root
       password: 66271489tan
+#      连不上远程服务器的redis
+#  redis:
+#    host: 8.130.100.162
+#    port: 6379
+#    password: 66271489
+#    database: 0
+  redis:
+    host: 127.0.0.1
+    part: 6379
+    database: 0
+
+
   mybatis-plus:
     configuration:
       #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
