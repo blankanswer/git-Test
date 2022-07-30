@@ -9,23 +9,37 @@ spring:
       servlet:
         load-on-startup: 1
 
+#  datasource:
+#    druid:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://localhost:3306/ruiji_take-out_food?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+#      username: root
+#      password: 66271489tan
+
+
   datasource:
+
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/ruiji_take-out_food?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
-      username: root
-      password: 66271489tan
-#      连不上远程服务器的redis
-#  redis:
-#    host: 8.130.100.162
-#    port: 6379
-#    password: 66271489
-#    database: 0
-  redis:
-    host: 127.0.0.1
-    part: 6379
-    database: 0
+      url: jdbc:mysql://8.130.100.162:3306/ruiji_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ruiji_take_out
+      password: 66271489
 
+    redis:
+        host: 8.130.100.162
+        port: 6379
+        password: 66271489
+        database: 0
+
+
+#  redis:
+#    host: 127.0.0.1
+#    part: 6379
+#    database: 0
+#
+  cache:
+    redis:
+      time-to-live: 1800000
 
   mybatis-plus:
     configuration:

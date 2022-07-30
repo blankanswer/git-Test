@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.Value;
 
 import java.awt.image.Kernel;
+import java.io.Serializable;
 import java.security.Key;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +16,7 @@ import java.util.Map;
  * @param <T>
  */
 @Data//这个data很关键啊卧槽，是因为这个报406了
-public class R<T> {
+public class R<T> implements Serializable {
     private Integer code;//编码 返回结果1： 成功 返回结果 0 失败
 
     private String msg;// 错误信息
